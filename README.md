@@ -1,51 +1,78 @@
-📊 Demographic Data Analyzer
-This project uses Pandas to analyze demographic data from the 1994 U.S. Census database. The goal is to answer key questions about the dataset, such as average 
-age, education level, work hours, and income distribution.
+Demographic Data Analyzer
 
-📁 Dataset
-The dataset is based on the 1994 Census and includes attributes such as age, education, occupation, hours worked per week, country of origin, and income level.
+This project analyzes demographic data from the 1994 U.S. Census database, following the freeCodeCamp Data Analysis with Python project.
 
-File format: CSV (comma-separated)
+📂 Dataset
 
-File used: adult.data.csv or a similar file
+The dataset is downloaded directly from freeCodeCamp’s GitHub repository using the requests module and saved locally as adult.data.csv.
 
-✅ Tasks & Questions Answered
-The following computations are implemented in the script:
+Each record contains attributes such as age, education, occupation, race, sex, hours-per-week, native country, and salary level (>50K or <=50K).
 
-Race Count
+## Steps Performed
 
-How many people of each race are represented in the dataset?
+1. Dataset Loading
 
-Average Age of Men
+Fetched dataset from the freeCodeCamp URL using requests.
 
-What is the average age of all male individuals?
+Loaded into a Pandas DataFrame with column names for clarity.
 
-Bachelor’s Degree Percentage
 
-What percentage of people have a Bachelor's degree?
 
-Income of Advanced Educated People
+2. Demographic Analysis
 
-What percentage of people with a Bachelors, Masters, or Doctorate degree earn >50K?
+Counted individuals by race.
 
-Income of Non-Advanced Educated People
+Calculated the percentage of people with a Bachelor’s degree.
 
-What percentage of people without advanced education earn >50K?
+Determined the percentage of rich (>50K) individuals:
 
-Minimum Work Hours
+With higher education (Bachelors, Masters, Doctorate).
 
-What is the minimum number of hours a person works per week?
+With lower education.
 
-High Earners Among Minimum Hour Workers
 
-What percentage of people working the minimum number of hours per week earn >50K?
+Found the minimum working hours per week and calculated what % of those working minimum hours are rich.
 
-Country with Highest High-Income Ratio
+Found the country with the highest percentage of rich people and that percentage.
 
-Which country has the highest percentage of >50K earners and what is that percentage?
+Identified the most common occupation among rich (>50K) people in India.
 
-Top Occupation in India (>50K earners)
 
-What is the most common occupation for those in India earning >50K?
 
-All percentages are rounded to the nearest tenth.
+3. Functions & Methods Used
+
+pandas.read_csv for loading data.
+
+value_counts, filtering with conditions, and isin.
+
+Percentage calculations using Pandas Series operations.
+
+
+
+
+📊 Key Results
+
+Race count: Distribution of people by race.
+
+% with Bachelors degree: ~X% (calculated from dataset).
+
+% rich with higher education: ~X%.
+
+% rich with lower education: ~X%.
+
+Minimum working hours: X hrs/week.
+
+% rich among minimum workers: ~X%.
+
+Country with highest % of rich people: {Country} (~X%).
+
+Most popular occupation among rich in India: {Occupation}.
+
+
+🚀 Technologies Used
+
+Python
+
+Pandas
+
+Requests
